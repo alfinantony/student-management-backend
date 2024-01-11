@@ -22,7 +22,16 @@ const studentDetailsSchema = new mongoose.Schema({
     address: String,
     email: String,
     phone: String,
-    district: String
+    district: String,
+    english:Number,
+    maths:Number,
+    science:Number,
+    social:Number,
+    hindi:Number,
+    totalMarks:Number,
+    averageMarks:Number
+    
+
 });
 
 // Create a model based on the schema for the 'studentdetails' collection

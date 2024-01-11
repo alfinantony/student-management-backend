@@ -3,6 +3,7 @@
 //1 : Import Express
 const express =require('express');
 
+
 //4: import cores for [ for connecting the backend and frontend]
 const cors = require('cors');
 
@@ -40,11 +41,22 @@ server.listen(5000,()=>{
 
         //logic for register
 
-        logic.studentdetails(req.body.name,req.body.address,req.body.email,req.body.phone,req.body.district).then((result)=>{
+        logic.studentdetails(req.body.name,req.body.address,req.body.email,req.body.phone,req.body.district,req.body.english,req.body.maths,req.body.science,req.body.social,req.body.hindi,req.body.totalMarks,req.body.averageMarks).then((result)=>{
             res.status(result.statusCode).json(result)
         })
         // res.send("Student details request received")
     })
 
     
+// Retrieve all student details
+// server.get('/studentdetails', async (req, res) => {
+//     try {
+//         const studentDetails = await logic.getStudentDetails();
+//         res.status(200).json(studentDetails);
+//     } catch (error) {
+//         console.error(error);
+//         res.status(500).json({ message : 'Internal Server Error' });
+//     }
+// });
+
 

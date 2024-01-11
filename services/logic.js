@@ -3,7 +3,7 @@
 const db = require('./db')
 
 
-const studentdetails=(name,address,email,phone,district)=>{
+const studentdetails=(name,address,email,phone,district,english,maths,science,social,hindi,totalMarks,averageMarks)=>{
         console.log('Inside the studentdetails function');
 
         // To check name in mongodb
@@ -20,7 +20,7 @@ const studentdetails=(name,address,email,phone,district)=>{
 
                 //if the student details is not there in mongodb then we need to register the details
                 const newstudentdetails = new db.studentdetails({
-                    name, address, email, phone, district
+                    name, address, email, phone, district,english,maths,science,social,hindi,totalMarks,averageMarks
                 });
                 // to store new student details in mongodb
                 newstudentdetails.save();
